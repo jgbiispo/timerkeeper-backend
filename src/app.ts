@@ -2,6 +2,7 @@ import "reflect-metadata";
 import express from "express";
 import { AppDataSource } from "./data-source";
 import dotenv from 'dotenv';
+import userRoutes from "./routes/userRoutes";
 
 dotenv.config();
 
@@ -15,8 +16,6 @@ AppDataSource.initialize().then(() => {
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send("Timekeeper Backend funcionando!");
-});
+app.use("/users", userRoutes);
 
 export default app;
