@@ -9,7 +9,7 @@
       "start": "ts-node src/index.ts",
       "lint": "eslint . --ext .ts",
       "format": "prettier --write .",
-      "typeorm": "typeorm-ts-node-commonjs"
+      "typeorm": "ts-node ./node_modules/typeorm/cli.js"
    },
    "keywords": [],
    "author": "",
